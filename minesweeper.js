@@ -174,7 +174,7 @@ class Minesweeper {
 
         this.exit = function () {
             console.log(userMessages['game-exit']);
-            delete window.game;
+            game = {};
         };
     }
 
@@ -232,9 +232,9 @@ class Minesweeper {
     * @param {mines} count of mines in a play field
     */
     #startNewGame(size, mines) {
-        const game = new Minesweeper(size, mines);
+        game = new Minesweeper(size, mines);
         game.getCounts();
-        window.game = game;
+        // window.game = game;
     }
 }
 
